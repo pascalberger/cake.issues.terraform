@@ -9,7 +9,8 @@ BuildParameters.SetParameters(
     title: "Cake.Issues.Terraform",
     repositoryOwner: "cake-contrib",
     repositoryName: "Cake.Issues.Terraform",
-    appVeyorAccountName: "cakecontrib");
+    appVeyorAccountName: "cakecontrib",
+    shouldGenerateDocumentation: false);
 
 BuildParameters.PrintParameters(Context);
 
