@@ -1,12 +1,7 @@
-environment:
-  # Disable publishing to GitHub package repository, since it will fail for
-  # Cake.Issues.Reporting and Cake.Issues.PullRequests because an archived repo with that name exists.
-  GPR_SOURCE:
-
 #---------------------------------#
 #  Build Image                    #
 #---------------------------------#
-image: Visual Studio 2019
+image: Visual Studio 2022
 
 #---------------------------------#
 #  Build Script                   #
@@ -16,7 +11,7 @@ install:
   - ps: nuget update -self
 
 build_script:
-  - ps: .\build.ps1 -Target CI
+  - ps: .\build.ps1 --target=CI
 
 # Tests
 test: off
